@@ -3,11 +3,7 @@ pipeline:
 - id: build
   overlay: ci/golang
   type: script
-  working_dir: /go/src/github.com/zalando-incubator/cluster-lifecycle-manager
   commands:
-  - desc: install deps
-    cmd: |
-      dep ensure -v -vendor-only
   - desc: test
     cmd: |
       make test
